@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('css/Roboto.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
 .popover {
   width: 200px;
 }
