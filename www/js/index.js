@@ -5,6 +5,7 @@ var myDB;
 document.addEventListener("deviceready",onDeviceReady,false);
 function onDeviceReady(){
 myDB = window.sqlitePlugin.openDatabase({name: "mySQLite.db"});
+    
 }
 //Create new table
 $("#createTable").click(function(){
@@ -36,6 +37,12 @@ $("#insert").click(function(){
     });
 });
 
+  /*  showTable();
+    function showTable{
+    
+    
+}
+                  */
 //Display Table Data
 $("#showTable").click(function(){
   $("#TableData").html("");
@@ -64,7 +71,7 @@ $(document.body).on('click', '.delete' ,function(){
 });
 
 
-//Delete Tables
+//Update Table
 $("#update").click(function(){
   var id=$("#id").text();
   var title=$("#title").val();
@@ -79,6 +86,7 @@ $("#update").click(function(){
   });
 });
 
+    //Delete Table
 $("#DropTable").click(function(){
     myDB.transaction(function(transaction) {
         var executeQuery = "DROP TABLE  IF EXISTS phonegap_pro";

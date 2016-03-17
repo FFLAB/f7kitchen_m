@@ -5,6 +5,7 @@ var myDB;
 document.addEventListener("deviceready",onDeviceReady,false);
 function onDeviceReady(){
 myDB = window.sqlitePlugin.openDatabase({name: "mySQLite.db"});
+    
 }
 //Create new table
 $("#createTable").click(function(){
@@ -36,6 +37,12 @@ $("#insert").click(function(){
     });
 });
 
+  /*  showTable();
+    function showTable{
+    
+    
+}
+                  */
 //Display Table Data
 $("#showTable").click(function(){
   $("#TableData").html("");
